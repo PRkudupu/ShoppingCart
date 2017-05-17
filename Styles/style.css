@@ -1,10 +1,19 @@
 .mainBody{
  
-    margin: 100px 250px;
+    margin: 26px 250px;
     border-radius: 25px;
     border: 2px solid #73AD21;
     padding: 20px;
     width: 1303px;
     height: 703px;
    
+}
+.header{
+   margin: 63px 0px 0px 555px;
+   font-size: 20px;
+   font-weight: solid;
+}
+h1{
+    color:#292929;
+    font-size:36px;
 }
