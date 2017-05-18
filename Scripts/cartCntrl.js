@@ -40,10 +40,21 @@ $scope.add=function(pr){
      $scope.itemsAdded=pr.productDesc;
    
 }
+//Empty the cart
 $scope.empty=function(pr){
      $scope.cart=[];
      $scope.itemsAdded="";
    
 }
+//Delet the cart
+$scope.delete=function(cr){
+    //var arr=$scope.cart
+     //console.log(arr);
+    $scope.cart=_.without($scope.cart, _.findWhere($scope.cart, {
+  productCode: cr.productCode
+}));
+    console.log($scope.cart);
+}
+
 
 });

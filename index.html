@@ -5,8 +5,8 @@
     <script src="./scripts/cartCntrl.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-   
-    
+     <script src=" https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" ></script>
+  
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="./Styles/bootstrap.css">
     <link rel="stylesheet" href="./Styles/style.css">
@@ -126,14 +126,15 @@
                                          <td><image src='{{cr.productUrl}}' class="smImage"></td>
                                         <td>{{cr.productCode}}</td>
                                         <td>{{cr.productDesc}}</td>
-                                        <td><input type="button" value="delete" class="btn btn-success" ng-click="delete(pr)"></td>
+                                        <td><input type="button" value="delete" class="btn btn-success" ng-click="delete(cr)"></td>
                                     </tr>
                                 </tbody>
                             </table>
                      </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">checkout</button>
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
 
