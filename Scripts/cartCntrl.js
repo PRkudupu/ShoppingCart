@@ -36,7 +36,12 @@ $scope.add=function(pr){
         productDesc:pr.productDesc,
      };
      $scope.cart.push(items);
-      //$scope.itemsAdded=pr.productDesc;
+     $scope.itemsAdded=pr.productDesc;
+   
+}
+$scope.empty=function(pr){
+     $scope.cart=[];
+     $scope.itemsAdded="";
    
 }
 });

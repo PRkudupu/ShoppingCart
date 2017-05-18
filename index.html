@@ -40,7 +40,9 @@
      <div class="container cart">
         <div class="row">
                 <div class="col-md-12 "> 
-                    <span ng-if='itemsAdded !=""'>{{itemsAdded}} has been added to</span><i class="fa fa-cart-arrow-down fa-2x" aria-hidden="true"></i>{{cart.length}} cart</div>
+                    <span ng-if='cart.length !=0'>{{itemsAdded}} has been added to</span>
+                    <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>{{cart.length}} cart
+                     <span ng-if='cart.length !=0'><i class="fa fa-trash fa-2x" aria-hidden="true" ng-click="empty()"></i></span></div>
         </div>
      </div>
     <!---Page content-->
