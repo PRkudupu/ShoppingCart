@@ -1,12 +1,17 @@
-<html>
+<html ng-app="myApp">
 <head>
     <title>Shopping cart</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+     <script src="./scripts/cartCntrl.js"></script>
+    
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="./Styles/bootstrap.css">
     <link rel="stylesheet" href="./Styles/style.css">
  </head>
 <body>
-    <div class="container"> 
+<div ng-controller="cartCntrl">
+   
+    <div class="container" > 
         <!---Nav-->
         <div class="row">
              <!---Navbar-->
@@ -28,7 +33,7 @@
 </div>
 <div class="Header">
   <!---Header-->
-   Online purchasing made easy
+   Online purchasing made easy  
 </div>
 <div class="mainbody">
      <div class="container">
@@ -39,11 +44,12 @@
     <!---Page content-->
     <div class="row"> 
         <div class="container">
+            <hr/>
              <!---Main Panel-->
                  <div class="panel panel-primary">
                      <!---Panel Header-->
                      <div class="panel panel-heading">
-                         Product Listing
+                         Product Listing 
                      </div>
                      <!---Panel Body-->
                      <div class="panel-body">
@@ -57,23 +63,19 @@
                                 <thead>
                                     <tr>
                                         <th>Image</th>
-                                        <th>Product description</th>
+                                        <th>Product Code</th>
+                                        <th>Product Description</th>
                                         <th>Price</th>
-                                        <th>Purchase</th>
+                                        <th>Add to cart</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>sds</td>
-                                        <td>sds</td>
-                                        <td>sds</td>
-                                        <td>sds</td>
-                                    </tr>
-                                    <tr>
-                                        <td>sds</td>
-                                        <td>sds</td>
-                                        <td>sds</td>
-                                        <td>sds</td>
+                                    <tr ng-repeat="pr in products">
+                                        <td><image src='{{pr.productUrl}}' class="smImage"></td>
+                                        <td>{{pr.productCode}}</td>
+                                        <td>{{pr.productDesc}}</td>
+                                        <td>{{pr.price}}</td>
+                                        <td><input type="button" value="Add to cart" class="btn btn-success"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -88,6 +90,9 @@
         <!---Nav-->
         <div class="row">
             <footer>  Help | About us | contact us | blog  </footer>
-      </div>
+        </div>
+    </div>
+</div>
+</div>
 </body>
 </html>
