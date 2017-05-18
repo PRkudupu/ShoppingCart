@@ -2,7 +2,10 @@
 <head>
     <title>Shopping cart</title>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-     <script src="./scripts/cartCntrl.js"></script>
+    <script src="./scripts/cartCntrl.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+   
     
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="./Styles/bootstrap.css">
@@ -41,8 +44,8 @@
         <div class="row">
                 <div class="col-md-12 "> 
                     <span ng-if='cart.length !=0'>{{itemsAdded}} has been added to</span>
-                    <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>{{cart.length}} cart
-                     <span ng-if='cart.length !=0'><i class="fa fa-trash fa-2x" aria-hidden="true" ng-click="empty()"></i></span></div>
+                    <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" ng-click="showCart()" data-toggle="modal" data-target="#showModal"></i>{{cart.length}} cart
+                     <span ng-if='cart.length !=0' ><i class="fa fa-trash fa-2x" aria-hidden="true" ng-click="empty()"></i></span></div>
         </div>
      </div>
     <!---Page content-->
@@ -97,6 +100,26 @@
             <footer>  Help | About us | contact us | blog  </footer>
         </div>
     </div>
+</div>
+<!-- Modal -->
+<div id="showModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
 </div>
 </div>
 </body>
