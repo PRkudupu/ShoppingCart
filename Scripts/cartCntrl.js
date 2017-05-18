@@ -2,6 +2,7 @@ var myModule=angular.module("myApp",[]);
 
 myModule.controller("cartCntrl",function($scope){
     alert("hello");
+   $scope.cart=[];
    $scope.products=[
        {
            productId:"1",
@@ -28,7 +29,11 @@ myModule.controller("cartCntrl",function($scope){
            price:"70$"
        }
      ];
-$scope.hello=function(){
+   
+$scope.add=function(pr){
+    //alert(items.productId);
+    cart.push(pr);
+    console.log("items"+pr);
     alert("added to cart");
 }
 });
