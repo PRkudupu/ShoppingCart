@@ -32,7 +32,8 @@ $scope.add=function(pr){
 
    //Create the json object  
     var items={
-        productId:pr.productCode,
+        productUrl:pr.productUrl,
+        productCode:pr.productCode,
         productDesc:pr.productDesc,
      };
      $scope.cart.push(items);

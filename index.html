@@ -109,10 +109,28 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <h4 class="modal-title">Cart Details</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+       <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Product Code</th>
+                                        <th>Product Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="cr in cart ">
+                                         <td><image src='{{cr.productUrl}}' class="smImage"></td>
+                                        <td>{{cr.productCode}}</td>
+                                        <td>{{cr.productDesc}}</td>
+                                        <td><input type="button" value="delete" class="btn btn-success" ng-click="delete(pr)"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                     </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
