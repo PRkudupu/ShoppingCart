@@ -10,8 +10,9 @@
 }
 .header{
    margin: 63px 0px 0px 555px;
-   font-size: 20px;
+   font-size: 25px;
    font-weight: solid;
+   padding: 0px 0px 0px 120px
 }
 .footer{
    margin: 34px 0px 0px 771px;
@@ -25,4 +26,8 @@ h1{
 .smImage{
     width: 50px;
     height: 57px;
+}
+.cart{
+    text-align: right;
+    font-weight:bold;
 }

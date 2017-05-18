@@ -28,5 +28,7 @@ myModule.controller("cartCntrl",function($scope){
            price:"70$"
        }
      ];
-
+$scope.hello=function(){
+    alert("added to cart");
+}
 });
