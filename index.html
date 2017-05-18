@@ -39,7 +39,8 @@
 <div class="mainbody">
      <div class="container cart">
         <div class="row">
-                <div class="col-md-12 "><i class="fa fa-cart-arrow-down fa-2x" aria-hidden="true"></i> cart</div>
+                <div class="col-md-12 "> 
+                    <span ng-if='itemsAdded !=""'>{{itemsAdded}} has been added to</span><i class="fa fa-cart-arrow-down fa-2x" aria-hidden="true"></i>{{cart.length}} cart</div>
         </div>
      </div>
     <!---Page content-->
@@ -56,7 +57,7 @@
                      <div class="panel-body">
                          <div class="row">
                              <div class="col-md-2">Filter By</div>
-                             <div class="col-md-4"><input type="text"/></div>
+                             <div class="col-md-4"><input type="text" ng-model="filterGrid"/></div>
                          </div>
                          <hr/>
                         <!---Table-->
@@ -72,7 +73,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="pr in products">
+                                    <tr ng-repeat="pr in products |filter:filterGrid">
                                         <td><image src='{{pr.productUrl}}' class="smImage"></td>
                                         <td>{{pr.productCode}}</td>
                                         <td>{{pr.productDesc}}</td>
